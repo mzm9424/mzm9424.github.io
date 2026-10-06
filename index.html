@@ -2,483 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  >
-
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#0a101d">
-
-  <meta
-    name="description"
-    content="bit Trade net cryptocurrency trading portal frontend."
-  >
-
   <title>bit Trade net — Trading Portal</title>
-
+  <meta name="description" content="bit Trade net cryptocurrency trading portal frontend. Simulated interface only.">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-  <!-- Toast notification -->
   <div id="toast" class="toast"></div>
 
-  <!-- =========================
-       AUTHENTICATION
-  ========================== -->
-
   <section id="authView" class="auth-shell">
-
     <div class="auth-brand">
-
-      <a class="brand" href="#login">
-        <img src="assets/logo.svg" alt="BTN">
+      <a class="brand" href="#login" aria-label="bit Trade net">
+        <img src="assets/logo.svg" alt="">
         <span>bit Trade <b>net</b></span>
       </a>
-
       <div class="auth-copy">
-
-        <span class="eyebrow">
-          DIGITAL ASSET PLATFORM
-        </span>
-
-        <h1>
-          Trade with clarity.<br>
-          <span>Move with confidence.</span>
-        </h1>
-
-        <p>
-          Explore markets, monitor your portfolio and manage
-          simulated digital assets from one responsive workspace.
-        </p>
-
-        <div class="trust-row">
-          <span>● Market data</span>
-          <span>● Portfolio tools</span>
-          <span>● Responsive UI</span>
-        </div>
-
+        <span class="eyebrow">DIGITAL ASSET PLATFORM</span>
+        <h1>Trade with clarity.<br><span>Move with confidence.</span></h1>
+        <p>Explore markets, monitor your portfolio and manage simulated digital assets from one responsive workspace.</p>
+        <div class="trust-row"><span>● Market data</span><span>● Portfolio tools</span><span>● Responsive UI</span></div>
       </div>
-
     </div>
-
-
     <div class="auth-card">
-
-      <!-- LOGIN -->
-
       <div id="loginPanel" class="auth-panel">
-
-        <div class="panel-head">
-
-          <span class="eyebrow">
-            WELCOME BACK
-          </span>
-
-          <h2>Sign in</h2>
-
-          <p>
-            Access your trading workspace.
-          </p>
-
-        </div>
-
+        <div class="panel-head"><span class="eyebrow">WELCOME BACK</span><h2>Sign in</h2><p>Access your trading workspace.</p></div>
         <form id="loginForm">
-
-          <label>
-            Email
-
-            <input
-              id="loginEmail"
-              type="email"
-              autocomplete="email"
-              placeholder="you@example.com"
-              required
-            >
-          </label>
-
-
-          <label>
-            Password
-
-            <input
-              id="loginPassword"
-              type="password"
-              autocomplete="current-password"
-              placeholder="••••••••"
-              required
-            >
-          </label>
-
-
-          <div class="form-row">
-
-            <label class="check">
-              <input type="checkbox">
-              Remember me
-            </label>
-
-            <a href="#" data-action="forgot">
-              Forgot password?
-            </a>
-
-          </div>
-
-
-          <button
-            class="btn primary full"
-            type="submit"
-          >
-            Sign in
-            <span>→</span>
-          </button>
-
+          <label>Email<input id="loginEmail" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+          <label>Password<input id="loginPassword" type="password" autocomplete="current-password" placeholder="••••••••" required></label>
+          <div class="form-row"><label class="check"><input type="checkbox"> Remember me</label><a href="#" data-action="forgot">Forgot password?</a></div>
+          <button class="btn primary full" type="submit">Sign in <span>→</span></button>
         </form>
-
-
-        <p class="switch">
-          New to BTN?
-
-          <button data-auth="signup">
-            Create account
-          </button>
-        </p>
-
+        <p class="switch">New to BTN? <button data-auth="signup">Create account</button></p>
       </div>
-
-
-      <!-- SIGNUP -->
 
       <div id="signupPanel" class="auth-panel hidden">
-
-        <div class="panel-head">
-
-          <span class="eyebrow">
-            GET STARTED
-          </span>
-
-          <h2>Create account</h2>
-
-          <p>
-            Set up a simulated trading profile.
-          </p>
-
-        </div>
-
-
+        <div class="panel-head"><span class="eyebrow">GET STARTED</span><h2>Create account</h2><p>Set up a simulated trading profile.</p></div>
         <form id="signupForm">
-
-          <label>
-            Full name
-
-            <input
-              id="signupName"
-              type="text"
-              placeholder="Your name"
-              required
-            >
-          </label>
-
-
-          <label>
-            Email
-
-            <input
-              id="signupEmail"
-              type="email"
-              placeholder="you@example.com"
-              required
-            >
-          </label>
-
-
-          <label>
-            Password
-
-            <input
-              id="signupPassword"
-              type="password"
-              minlength="6"
-              placeholder="At least 6 characters"
-              required
-            >
-          </label>
-
-
-          <label class="check terms">
-
-            <input
-              type="checkbox"
-              required
-            >
-
-            I understand this is a simulated frontend.
-
-          </label>
-
-
-          <button
-            class="btn primary full"
-            type="submit"
-          >
-            Create account
-            <span>→</span>
-          </button>
-
+          <label>Full name<input id="signupName" type="text" placeholder="Your name" required></label>
+          <label>Email<input id="signupEmail" type="email" placeholder="you@example.com" required></label>
+          <label>Password<input id="signupPassword" type="password" minlength="6" placeholder="At least 6 characters" required></label>
+          <label class="check terms"><input type="checkbox" required> I understand this is a simulated frontend.</label>
+          <button class="btn primary full" type="submit">Create account <span>→</span></button>
         </form>
-
-
-        <p class="switch">
-
-          Already have an account?
-
-          <button data-auth="login">
-            Sign in
-          </button>
-
-        </p>
-
+        <p class="switch">Already have an account? <button data-auth="login">Sign in</button></p>
       </div>
-
-
-      <div class="demo-note">
-        SIMULATED FRONTEND • NO REAL FUNDS OR TRANSACTIONS
-      </div>
-
+      <div class="demo-note">SIMULATED FRONTEND • NO REAL FUNDS OR TRANSACTIONS</div>
     </div>
-
   </section>
-
-
-  <!-- =========================
-       APPLICATION
-  ========================== -->
 
   <section id="appView" class="app-shell hidden">
-
-    <!-- TOP BAR -->
-
     <header class="topbar">
-
-      <button
-        id="mobileMenu"
-        class="icon-btn mobile-only"
-        aria-label="Open menu"
-      >
-        ☰
-      </button>
-
-
-      <a
-        class="brand compact"
-        href="#dashboard"
-      >
-
-        <img
-          src="assets/logo.svg"
-          alt="BTN"
-        >
-
-        <span>
-          bit Trade <b>net</b>
-        </span>
-
-      </a>
-
-
-      <div class="top-search">
-
-        <span>⌕</span>
-
-        <input
-          id="globalSearch"
-          placeholder="Search markets, assets..."
-        >
-
-      </div>
-
-
+      <button id="mobileMenu" class="icon-btn mobile-only" aria-label="Open menu">☰</button>
+      <a class="brand compact" href="#dashboard"><img src="assets/logo.svg" alt=""><span>bit Trade <b>net</b></span></a>
+      <div class="top-search"><span>⌕</span><input id="globalSearch" placeholder="Search markets, assets..."></div>
       <div class="top-actions">
-
-        <span class="status-pill">
-          <i></i>
-          Markets live
-        </span>
-
-
-        <button
-          class="icon-btn"
-          data-action="notify"
-        >
-          ◔
-        </button>
-
-
-        <button
-          class="profile-mini"
-          id="profileBtn"
-        >
-
-          <span id="avatar">
-            B
-          </span>
-
-          <span id="topUser">
-            User
-          </span>
-
-          <small>
-            ⌄
-          </small>
-
-        </button>
-
+        <span class="status-pill"><i></i> Markets live</span>
+        <button class="icon-btn" data-action="notify">◔</button>
+        <button class="profile-mini" id="profileBtn"><span id="avatar">B</span><span id="topUser">User</span><small>⌄</small></button>
       </div>
-
     </header>
 
-
-    <!-- SIDEBAR -->
-
-    <aside
-      class="sidebar"
-      id="sidebar"
-    >
-
-      <div class="side-label">
-        WORKSPACE
-      </div>
-
-
+    <aside class="sidebar" id="sidebar">
+      <div class="side-label">WORKSPACE</div>
       <nav>
-
-        <a
-          href="#dashboard"
-          data-route="dashboard"
-        >
-          <span>▦</span>
-          Dashboard
-        </a>
-
-
-        <a
-          href="#markets"
-          data-route="markets"
-        >
-          <span>◒</span>
-          Markets
-        </a>
-
-
-        <a
-          href="#trade"
-          data-route="trade"
-        >
-          <span>↯</span>
-          Trade
-        </a>
-
-
-        <a
-          href="#wallet"
-          data-route="wallet"
-        >
-          <span>◇</span>
-          Wallet
-        </a>
-
+        <a href="#dashboard" data-route="dashboard"><span>▦</span> Dashboard</a>
+        <a href="#markets" data-route="markets"><span>◒</span> Markets</a>
+        <a href="#trade" data-route="trade"><span>↯</span> Trade</a>
+        <a href="#wallet" data-route="wallet"><span>◇</span> Wallet</a>
       </nav>
-
-
-      <div class="side-label">
-        ACCOUNT
-      </div>
-
-
+      <div class="side-label">ACCOUNT</div>
       <nav>
-
-        <a
-          href="#deposit"
-          data-route="deposit"
-        >
-          <span>＋</span>
-          Deposit
-        </a>
-
-
-        <a
-          href="#withdraw"
-          data-route="withdraw"
-        >
-          <span>↗</span>
-          Withdraw
-        </a>
-
-
-        <a
-          href="#transactions"
-          data-route="transactions"
-        >
-          <span>≡</span>
-          Transactions
-        </a>
-
-
-        <a
-          href="#settings"
-          data-route="settings"
-        >
-          <span>⚙</span>
-          Settings
-        </a>
-
+        <a href="#deposit" data-route="deposit"><span>＋</span> Deposit</a>
+        <a href="#withdraw" data-route="withdraw"><span>↗</span> Withdraw</a>
+        <a href="#transactions" data-route="transactions"><span>≡</span> Transactions</a>
+        <a href="#settings" data-route="settings"><span>⚙</span> Settings</a>
       </nav>
-
-
       <div class="side-bottom">
-
-        <div class="simulation-card">
-
-          <strong>
-            SIMULATED MODE
-          </strong>
-
-          <span>
-            Frontend data only
-          </span>
-
-        </div>
-
-
-        <button
-          class="logout"
-          data-action="logout"
-        >
-          ↪
-          <span>
-            Sign out
-          </span>
-        </button>
-
+        <div class="simulation-card"><strong>SIMULATED MODE</strong><span>Frontend data only</span></div>
+        <button class="logout" data-action="logout">↪ <span>Sign out</span></button>
       </div>
-
     </aside>
 
-
-    <!-- MAIN CONTENT -->
-
-    <main
-      class="main"
-      id="main"
-    ></main>
-
+    <main class="main" id="main"></main>
   </section>
 
-
-  <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
