@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<defs><linearGradient id="a" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#10b981"/></linearGradient></defs>
+<path d="M32 4 56 18v28L32 60 8 46V18z" fill="#0b1525" stroke="url(#a)" stroke-width="3"/>
+<path d="m21 25 11-7 11 7v14l-11 7-11-7z" fill="none" stroke="#e8f5ff" stroke-width="2"/>
+<path d="M26 28h12M26 34h12M29 40h6" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+<text x="32" y="57" text-anchor="middle" font-size="7" fill="#10b981" font-family="Arial" font-weight="700">BTN</text></svg>
